@@ -2675,6 +2675,9 @@ static const struct qcom_reset_map gcc_msm8909_resets[] = {
 	[GCC_VENUS0_BCR] = { 0x4c014 },
 	/* Subsystem Restart */
 	[GCC_MSS_RESTART] = { 0x3e000 },
+	[GCC_VENUS_RESTART] = { 0x10004 },
+	[GCC_WCSS_RESTART] = { 0x11000 },
+	[GCC_RPM_RESET] = { 0x60000 },
 };
 
 static const struct regmap_config gcc_msm8909_regmap_config = {
