@@ -1,0 +1,107 @@
+// SPDX-License-Identifier: GPL-2.0-only
+// Copyright (C) 2022 Stephan Gerhold
+
+/* FIXME: Dummy node to make msm8916-tf-a.dtsi happy */
+/ {
+	/omit-if-no-ref/ apps_iommu: apps_iommu {};
+	/omit-if-no-ref/ camss: camss {};
+	/omit-if-no-ref/ gpu_iommu: gpu-iommu {};
+	/omit-if-no-ref/ gpu: gpu {};
+	/omit-if-no-ref/ lpass: lpass {};
+	/omit-if-no-ref/ mdp: mdp {};
+	/omit-if-no-ref/ venus: venus {};
+};
+
+blsp1_uart1: &blsp_uart1 {};
+blsp1_uart2: &blsp_uart2 {};
+pm8916_rtc: &pm8909_rtc {};
+
+#include "arm64/qcom/msm8916-tf-a.dtsi"
+
+/ {
+	psci {
+		compatible = "arm,psci-1.0";
+		method = "smc";
+	};
+};
+
+&cpu0 {
+	enable-method = "psci";
+	cpu-idle-states = <&CPU_SLEEP_0>;
+};
+&cpu1 {
+	enable-method = "psci";
+	cpu-idle-states = <&CPU_SLEEP_0>;
+};
+&cpu2 {
+	enable-method = "psci";
+	cpu-idle-states = <&CPU_SLEEP_0>;
+};
+&cpu3 {
+	enable-method = "psci";
+	cpu-idle-states = <&CPU_SLEEP_0>;
+};
+
+/* CPU power management hardware is reserved by the PSCI firmware */
+&cpu0_acc {
+	status = "reserved";
+};
+&cpu0_saw {
+	status = "reserved";
+};
+&cpu1_acc {
+	status = "reserved";
+};
+&cpu1_saw {
+	status = "reserved";
+};
+&cpu2_acc {
+	status = "reserved";
+};
+&cpu2_saw {
+	status = "reserved";
+};
+&cpu3_acc {
+	status = "reserved";
+};
+&cpu3_saw {
+	status = "reserved";
+};
+
+&apps_smmu {
+	/* MSM8909 has dedicated interrupts for all context banks */
+	interrupts =
+		<GIC_SPI 41 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 101 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 102 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 103 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 104 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 105 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 106 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 109 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 110 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 111 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 112 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 113 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 114 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 115 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 116 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 117 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 118 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 119 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 120 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 122 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 223 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 224 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 225 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 228 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 229 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 230 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 231 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 232 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 233 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 150 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 151 IRQ_TYPE_LEVEL_HIGH>,
+		<GIC_SPI 152 IRQ_TYPE_LEVEL_HIGH>;
+};
