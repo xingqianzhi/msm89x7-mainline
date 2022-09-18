@@ -207,6 +207,9 @@
 
 /* Subsystem Restart */
 #define GCC_MSS_RESTART				41
+#define GCC_WCSS_RESTART			42
+#define GCC_VENUS_RESTART			43
+#define GCC_RPM_RESET                   	44
 
 /* Power Domains */
 #define MDSS_GDSC				0
