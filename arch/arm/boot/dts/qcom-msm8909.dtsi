@@ -1178,7 +1178,7 @@
 						compatible = "qcom,wcnss-bt";
 					};
 
-					wifi {
+					pronto_wlan: wifi {
 						compatible = "qcom,wcnss-wlan";
 
 						interrupts = <GIC_SPI 145 IRQ_TYPE_LEVEL_HIGH>,
