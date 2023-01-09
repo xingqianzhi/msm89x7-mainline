@@ -719,14 +719,12 @@
 	msmgpio_leds: msmgpio-leds-state {
 		pins = "gpio21", "gpio120";
 		function = "gpio";
-
 		output-low;
 	};
 
 	usb_id_default: usb-id-default-state {
 		pins = "gpio121";
 		function = "gpio";
-
 		drive-strength = <8>;
 		input-enable;
 		bias-pull-up;
@@ -735,7 +733,6 @@
 	adv7533_int_active: adv533-int-active-state {
 		pins = "gpio31";
 		function = "gpio";
-
 		drive-strength = <16>;
 		bias-disable;
 	};
@@ -743,7 +740,6 @@
 	adv7533_int_suspend: adv7533-int-suspend-state {
 		pins = "gpio31";
 		function = "gpio";
-
 		drive-strength = <2>;
 		bias-disable;
 	};
@@ -751,7 +747,6 @@
 	adv7533_switch_active: adv7533-switch-active-state {
 		pins = "gpio32";
 		function = "gpio";
-
 		drive-strength = <16>;
 		bias-disable;
 	};
@@ -759,7 +754,6 @@
 	adv7533_switch_suspend: adv7533-switch-suspend-state {
 		pins = "gpio32";
 		function = "gpio";
-
 		drive-strength = <2>;
 		bias-disable;
 	};
@@ -767,7 +761,6 @@
 	msm_key_volp_n_default: msm-key-volp-n-default-state {
 		pins = "gpio107";
 		function = "gpio";
-
 		drive-strength = <8>;
 		input-enable;
 		bias-pull-up;
@@ -784,7 +777,6 @@
 	usb_hub_reset_pm: usb-hub-reset-pm-state {
 		pins = "gpio3";
 		function = PMIC_GPIO_FUNC_NORMAL;
-
 		input-disable;
 		output-high;
 	};
@@ -792,14 +784,12 @@
 	usb_hub_reset_pm_device: usb-hub-reset-pm-device-state {
 		pins = "gpio3";
 		function = PMIC_GPIO_FUNC_NORMAL;
-
 		output-low;
 	};
 
 	usb_sw_sel_pm: usb-sw-sel-pm-state {
 		pins = "gpio4";
 		function = PMIC_GPIO_FUNC_NORMAL;
-
 		power-source = <PM8916_GPIO_VPH>;
 		input-disable;
 		output-high;
@@ -808,7 +798,6 @@
 	usb_sw_sel_pm_device: usb-sw-sel-pm-device-state {
 		pins = "gpio4";
 		function = PMIC_GPIO_FUNC_NORMAL;
-
 		power-source = <PM8916_GPIO_VPH>;
 		input-disable;
 		output-low;
@@ -817,7 +806,6 @@
 	pm8916_gpios_leds: pm8916-gpios-leds-state {
 		pins = "gpio1", "gpio2";
 		function = PMIC_GPIO_FUNC_NORMAL;
-
 		output-low;
 	};
 };
@@ -835,7 +823,6 @@
 	ls_exp_gpio_f: pm8916-mpp4-state {
 		pins = "mpp4";
 		function = "digital";
-
 		output-low;
 		power-source = <PM8916_MPP_L5>;	/* 1.8V */
 	};
@@ -843,7 +830,6 @@
 	pm8916_mpps_leds: pm8916-mpps-state {
 		pins = "mpp2", "mpp3";
 		function = "digital";
-
 		output-low;
 	};
 };
