@@ -1181,8 +1181,8 @@
 			assigned-clocks = <&gcc GCC_CAMSS_CCI_AHB_CLK>,
 					  <&gcc GCC_CAMSS_CCI_CLK>;
 			assigned-clock-rates = <80000000>, <19200000>;
-			pinctrl-names = "default";
 			pinctrl-0 = <&cci0_default>;
+			pinctrl-names = "default";
 			status = "disabled";
 
 			cci_i2c0: i2c-bus@0 {
@@ -1531,9 +1531,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 0>, <&blsp_dma 1>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&blsp1_uart1_default>;
 			pinctrl-1 = <&blsp1_uart1_sleep>;
+			pinctrl-names = "default", "sleep";
 			status = "disabled";
 		};
 
@@ -1545,9 +1545,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 2>, <&blsp_dma 3>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&blsp1_uart2_default>;
 			pinctrl-1 = <&blsp1_uart2_sleep>;
+			pinctrl-names = "default", "sleep";
 			status = "disabled";
 		};
 
@@ -1560,9 +1560,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 4>, <&blsp_dma 5>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c1_default>;
 			pinctrl-1 = <&i2c1_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1577,9 +1577,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 4>, <&blsp_dma 5>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi1_default>;
 			pinctrl-1 = <&spi1_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1594,9 +1594,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 6>, <&blsp_dma 7>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c2_default>;
 			pinctrl-1 = <&i2c2_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1611,9 +1611,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 6>, <&blsp_dma 7>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi2_default>;
 			pinctrl-1 = <&spi2_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1628,9 +1628,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 8>, <&blsp_dma 9>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c3_default>;
 			pinctrl-1 = <&i2c3_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1645,9 +1645,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 8>, <&blsp_dma 9>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi3_default>;
 			pinctrl-1 = <&spi3_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1662,9 +1662,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 10>, <&blsp_dma 11>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c4_default>;
 			pinctrl-1 = <&i2c4_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1679,9 +1679,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 10>, <&blsp_dma 11>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi4_default>;
 			pinctrl-1 = <&spi4_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1696,9 +1696,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 12>, <&blsp_dma 13>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c5_default>;
 			pinctrl-1 = <&i2c5_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1713,9 +1713,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 12>, <&blsp_dma 13>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi5_default>;
 			pinctrl-1 = <&spi5_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1730,9 +1730,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 14>, <&blsp_dma 15>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&i2c6_default>;
 			pinctrl-1 = <&i2c6_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1747,9 +1747,9 @@
 			clock-names = "core", "iface";
 			dmas = <&blsp_dma 14>, <&blsp_dma 15>;
 			dma-names = "tx", "rx";
-			pinctrl-names = "default", "sleep";
 			pinctrl-0 = <&spi6_default>;
 			pinctrl-1 = <&spi6_sleep>;
+			pinctrl-names = "default", "sleep";
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "disabled";
@@ -1817,8 +1817,8 @@
 			qcom,smem-states = <&wcnss_smp2p_out 0>;
 			qcom,smem-state-names = "stop";
 
-			pinctrl-names = "default";
 			pinctrl-0 = <&wcnss_pin_a>;
+			pinctrl-names = "default";
 
 			status = "disabled";
 
