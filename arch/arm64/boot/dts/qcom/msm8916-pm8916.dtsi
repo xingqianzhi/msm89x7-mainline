@@ -15,6 +15,10 @@
 	vdda-supply = <&pm8916_l2>;
 };
 
+&cpr {
+	vdd-apc-supply = <&pm8916_spmi_s2>;
+};
+
 &mdss_dsi0 {
 	vdda-supply = <&pm8916_l2>;
 	vddio-supply = <&pm8916_l6>;
@@ -32,6 +36,15 @@
 	vdd-cdc-io-supply = <&pm8916_l5>;
 	vdd-cdc-tx-rx-cx-supply = <&pm8916_l5>;
 	vdd-micbias-supply = <&pm8916_l13>;
+};
+
+&pm8916_spmi_regulators {
+	pm8916_spmi_s2: s2 {
+		regulator-min-microvolt = <1050000>;
+		regulator-max-microvolt = <1350000>;
+		/* Disabled automatically by hardware when CPU is in deep idle */
+		regulator-always-on;
+	};
 };
 
 &sdhc_1 {

@@ -181,6 +181,10 @@
 			status = "disabled";
 		};
 
+		pm8916_spmi_regulators: regulators {
+			compatible = "qcom,pm8916-regulators";
+		};
+
 		pm8916_vib: vibrator@c000 {
 			compatible = "qcom,pm8916-vib";
 			reg = <0xc000>;
