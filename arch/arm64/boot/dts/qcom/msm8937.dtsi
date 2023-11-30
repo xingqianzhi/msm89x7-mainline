@@ -395,9 +395,6 @@
 		clock-frequency = <19200000>;
 	};
 
-
-
-
 	pmu {
 		compatible = "arm,cortex-a53-pmu";
 		interrupts = <GIC_PPI 7 (GIC_CPU_MASK_SIMPLE(4) | IRQ_TYPE_LEVEL_HIGH)>;
@@ -913,7 +910,7 @@
 			};
 
 
-			dsi_phy0: dsi-phy@1a94400 {
+			dsi_phy0: phy@1a94400 {
 				compatible = "qcom,dsi-phy-28nm-lp-8937";
 				reg = <0x01a94a00 0xd4>,
 				      <0x01a94400 0x280>,
@@ -930,7 +927,7 @@
 				clock-names = "iface", "ref";
 			};
 
-			dsi_phy1: dsi-phy@1a94600 {
+			dsi_phy1: phy@1a94600 {
 				compatible = "qcom,dsi-phy-28nm-lp-8937";
 				reg = <0x01a96a00 0xd4>,
 				      <0x01a96400 0x280>,
