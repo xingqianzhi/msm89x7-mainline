@@ -320,3 +320,16 @@
 	vdda3p3-supply = <&pm8937_l13>;
 	status = "okay";
 };
+
+&wcnss {
+	firmware-name = "qcom/msm8940/xiaomi/santoni/wcnss.mbn";
+	status = "okay";
+};
+
+&wcnss_iris {
+	compatible = "qcom,wcn3620";
+};
+
+&wcnss_mem {
+	status = "okay";
+};
