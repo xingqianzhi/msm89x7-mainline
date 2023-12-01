@@ -1338,6 +1338,9 @@
 				 <&gcc GCC_SDCC1_AHB_CLK>,
 				 <&rpmcc RPM_SMD_XO_CLK_SRC>;
 			clock-names = "core", "iface", "xo";
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&sdc1_default>;
+			pinctrl-1 = <&sdc1_sleep>;
 			power-domains = <&rpmpd MSM8917_VDDCX>;
 			mmc-hs200-1_8v;
 			mmc-hs400-1_8v;
@@ -1359,6 +1362,9 @@
 				 <&gcc GCC_SDCC2_AHB_CLK>,
 				 <&rpmcc RPM_SMD_XO_CLK_SRC>;
 			clock-names = "core", "iface", "xo";
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&sdc2_default>;
+			pinctrl-1 = <&sdc2_sleep>;
 			power-domains = <&rpmpd MSM8917_VDDCX>;
 			bus-width = <4>;
 			status = "disabled";
@@ -1567,8 +1573,9 @@
 			qcom,smem-states = <&wcnss_smp2p_out 0>;
 			qcom,smem-state-names = "stop";
 
-			pinctrl-names = "default";
-			pinctrl-0 = <&wcnss_pin_a>;
+			pinctrl-names = "default", "sleep";
+			pinctrl-0 = <&wcss_wlan_default>;
+			pinctrl-1 = <&wcss_wlan_sleep>;
 
 			status = "disabled";
 
