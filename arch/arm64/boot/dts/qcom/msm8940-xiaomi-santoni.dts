@@ -290,6 +290,24 @@
 	status = "okay";
 };
 
+&sdc2_default {
+	cd-pins {
+		pins = "gpio67";
+		function = "gpio";
+		drive-strength = <2>;
+		bias-pull-up;
+	};
+};
+
+&sdc2_sleep {
+	cd-pins {
+		pins = "gpio67";
+		function = "gpio";
+		drive-strength = <2>;
+		bias-disable;
+	};
+};
+
 &usb {
 	dr_mode = "peripheral";
 	extcon = <&pmi8950_usb_vbus>;
