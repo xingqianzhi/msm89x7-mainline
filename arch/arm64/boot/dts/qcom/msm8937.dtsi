@@ -332,6 +332,7 @@
 
 	cpu_opp_table_c0: opp-table-c0 {
 		compatible = "operating-points-v2";
+		opp-shared;
 
 		opp-960000000 {
 			opp-hz = /bits/ 64 <960000000>;
@@ -364,6 +365,7 @@
 
 	cpu_opp_table_c1: opp-table-c1 {
 		compatible = "operating-points-v2";
+		opp-shared;
 
 		opp-768000000 {
 			opp-hz = /bits/ 64 <768000000>;
