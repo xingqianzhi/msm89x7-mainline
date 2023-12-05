@@ -744,13 +744,13 @@
 
 		a53pll_c0: clock@b116000 {
 			compatible = "qcom,msm8939-a53pll";
-			reg = <0x0b116000 0x34>;
+			reg = <0x0b116000 0x40>;
 			#clock-cells = <0>;
 		};
 
 		a53pll_c1: clock@b016000 {
 			compatible = "qcom,msm8939-a53pll";
-			reg = <0x0b016000 0x34>;
+			reg = <0x0b016000 0x40>;
 			#clock-cells = <0>;
 		};
 
